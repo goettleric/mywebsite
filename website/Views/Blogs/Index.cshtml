@@ -1,0 +1,41 @@
+﻿@model IEnumerable<website.Models.Blog>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DateWritten)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BlogSubject)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BlogContents)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateWritten)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BlogSubject)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BlogContents)
+        </td>
+        <td>
+            @Html.ActionLink("Details", "Details", new { id=item.BlogID }) |
+        </td>
+    </tr>
+}
+
+</table>

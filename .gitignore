@@ -259,3 +259,6 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+/website/Views/Blogs/Edit.cshtml
+/website/Views/Blogs/Delete.cshtml
+/website/Views/Blogs/Create.cshtml
